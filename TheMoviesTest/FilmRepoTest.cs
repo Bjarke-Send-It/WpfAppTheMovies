@@ -1,10 +1,26 @@
-namespace TheMoviesTest;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WpfAppTheMovies.Models.Repository;
+using WpfAppTheMovies.Models;
 
-[TestClass]
-public class FilmRepoTest
+namespace WpfAppTheMovies.Tests
 {
-    [TestMethod]
-    public void TestMethod1()
+    [TestClass]
+    public class FilmRepoTests
     {
+        [TestMethod]
+        public void AddFilm_ShouldStoreCorrectly()
+        {
+            // Arrange
+            var repo = new FilmRepo();
+            var film = new Film("Repo Test", 90, "Action");
+
+            // Act
+            repo.AddFilm(film);
+            var all = repo.GetAll();
+
+            // Assert
+            Assert.AreEqual(1, all.Count);
+            Assert.AreEqual("Repo Test", all[0].Title);
+        }
     }
 }

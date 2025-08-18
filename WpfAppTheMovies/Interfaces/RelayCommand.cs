@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace WpfAppTheMovies.Interfaces
 {
-    internal class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         private readonly Action _execute;
         private readonly Func<bool> _canExecute;
@@ -21,7 +21,7 @@ namespace WpfAppTheMovies.Interfaces
         public RelayCommand(Action execute, Func<bool> canExecute = null)
         {
             _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            _canExecute = canExecute; 
+            _canExecute = canExecute;
         }
 
         public bool CanExecute(object parameter)
@@ -31,7 +31,7 @@ namespace WpfAppTheMovies.Interfaces
 
         public void Execute(object parameter)
         {
-            _canExecute();
+            _execute(); // ✅ Kald handlingen, ikke betingelsen
         }
     }
 }
