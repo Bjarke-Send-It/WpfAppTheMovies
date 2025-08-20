@@ -31,7 +31,7 @@ namespace WpfAppTheMovies.Interfaces
 
         public void Execute(object parameter)
         {
-            _execute(); // ✅ Kald handlingen, ikke betingelsen
+            _execute(); 
         }
     }
 }
