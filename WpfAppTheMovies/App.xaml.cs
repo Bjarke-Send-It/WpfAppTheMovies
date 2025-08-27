@@ -10,5 +10,6 @@ namespace WpfAppTheMovies
     public partial class App : Application
     {
     }
+   
 
 }

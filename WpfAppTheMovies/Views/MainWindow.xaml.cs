@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppTheMovies.Views;
 
 namespace WpfAppTheMovies
 {
@@ -19,6 +20,15 @@ namespace WpfAppTheMovies
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+        private void CinemaProgramWindow_Click(object sender, RoutedEventArgs e)
+        {
+            // Create an instance of the SecondWindow
+            CinemaProgramWindow cinemaProgramWindow = new CinemaProgramWindow();
+
+            // Show the SecondWindow
+            cinemaProgramWindow.Show();
         }
     }
 }
