@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfAppTheMovies.Models
 {
-    internal class Cinema
+    public class Cinema
     {
         public string Name { get; set; }
         public string City { get; set; }
@@ -16,6 +16,7 @@ namespace WpfAppTheMovies.Models
             Name = name;
             City = city;
         }
+
         // addfilms() kræver vel noget at tilføje det til?
     }
 }

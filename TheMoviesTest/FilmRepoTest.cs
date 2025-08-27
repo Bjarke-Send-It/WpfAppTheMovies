@@ -8,7 +8,7 @@ namespace WpfAppTheMovies.Tests
     public class FilmRepoTests
     {
         [TestMethod]
-        public void AddFilm_ShouldStoreCorrectly()
+        public void Add_ShouldStoreCorrectly()
         {
             // Arrange
             var repo = new FilmRepo();

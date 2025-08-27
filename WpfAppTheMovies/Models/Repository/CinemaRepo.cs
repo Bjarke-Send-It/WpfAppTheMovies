@@ -7,7 +7,7 @@ using WpfAppTheMovies.Models.Interfaces;
 
 namespace WpfAppTheMovies.Models.Repository
 {
-    internal class CinemaRepo : ICinemaRepo
+    public class CinemaRepo : ICinemaRepo
     {
         private List<Cinema> cinemas = new List<Cinema>();
 
